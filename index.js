@@ -1,8 +1,8 @@
 function tables(){
         let article = document.querySelector("article")
+        let table = document.getElementById("displayTable")
         article.style.display = "block"
-        table.innerHTML = ``
-        table.innerHTML = `<table id="table" border="3">
+        table.innerHTML = `<table id="displayTable" border="3">
                                 <tbody>
                                     <tr></tr>
                                 </tbody>
@@ -11,12 +11,13 @@ function tables(){
                 let noodles = Number(row.value)
                 let operation = operand.value
                 let result;
-                tableRow = document.querySelector("#table tr")
+                let tableRow = document.querySelector("#displayTable tr")
                 tableRow.innerHTML = ``
         for (var i = box; i > 0; i--){
             tableRow.innerHTML += `<td></td>`
-            table = document.querySelector("#table tr td:last-of-type")
+            table = document.querySelector("#displayTable tr td:last-of-type")
             for(var j = 1; j <= noodles; j++){
+                let operator
                 if (operation == "+"){
                     operator = "+"
                     result = i + j;
